@@ -2,8 +2,6 @@
 
 Zone Risk Engine (ZRE) is a simulation driven anomaly detection system for electrical distribution zones. It operates over simulated real time intervals, comparing aggregated household consumption with transformer level load to identify imbalances, abnormal usage patterns, and potential risks such as power theft, overload, and system faults.
 
----
-
 What it does
 
 ZRE continuously monitors multi house electrical activity within each zone and produces a normalized risk score between 0 and 1.
@@ -19,7 +17,6 @@ Time aware feature encoding using hour of day context
 
 These components work together to surface abnormal electrical behavior in near real time.
 
----
 
 Risk Computation
 
@@ -37,7 +34,6 @@ risk = tanh(anomaly + deviation/10 + cluster + drift + future/6)
 
 This produces a stable and normalized score that responds to both sudden anomalies and gradual behavioral shifts.
 
----
 
 Why it matters
 
@@ -49,7 +45,6 @@ Faster inspection decisions
 Improved grid reliability
 Reduction of non technical losses
 
----
 
 Core Features
 
@@ -66,7 +61,6 @@ FastAPI backend supporting real time ingestion with simulated input
 Streamlit dashboard with tables, heatmaps, and time series
 Automated email alerts when risk exceeds threshold
 
----
 
 System Architecture
 
@@ -86,7 +80,6 @@ Zone status tables
 Load heatmaps
 Risk over time visualization
 
----
 
 Screenshots
 
@@ -108,7 +101,6 @@ Time series representation of risk evolution across zones
 Email Alert System
 Automated alert triggered when risk crosses the defined threshold
 
----
 
 System Limitation (Critical Insight)
 
@@ -140,7 +132,7 @@ This creates an identifiability problem where different physical realities produ
 
 This limitation is not due to model failure, but due to insufficient measurement granularity.
 
----
+
 
 System Evolution: Line Level Sensing
 
@@ -155,7 +147,6 @@ Differentiation between consumption and theft
 Reduced ambiguity in anomaly interpretation
 Transition from detection to precise fault identification
 
----
 
 How to Run
 
@@ -167,7 +158,6 @@ Dashboard
 
 streamlit run dashboard.py
 
----
 
 Project Structure
 
@@ -178,7 +168,6 @@ requirements.txt
 README.md
 screenshots/
 
----
 
 Notes
 
@@ -191,7 +180,6 @@ Alert generation
 
 The current implementation uses simulated input streams to validate anomaly detection logic, temporal behavior, and system response before real world deployment.
 
----
 
 Closing Note
 
